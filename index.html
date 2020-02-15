@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loading em %</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="preloader">
+        <div class="counter">0</div>
+    </div>
+
+    <section>
+        <h2>Seja bem vindo  <span>aguarde o carregamento ... e rapidinho :)</span></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dolore accusantium unde quae velit deleniti veritatis consequatur id impedit temporibus, cupiditate est corporis consequuntur voluptate sint at? Voluptatum, officiis quam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium saepe optio quo, quasi doloribus accusantium libero voluptatum eius quaerat iure dicta eum error aliquid. Debitis dicta ipsam reiciendis. Fugit, voluptatem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate iusto quam minus impedit esse fugit alias, commodi quasi sunt, eius soluta. Mollitia recusandae id libero, aspernatur quas quisquam quos ipsa! Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti beatae est et error voluptatum iusto amet perspiciatis distinctio nihil omnis nemo molestias libero temporibus laborum nobis, quod facilis. Optio, odio? Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nihil enim molestias aliquid, iste, rerum error sunt incidunt officiis tempora recusandae amet. Doloribus vel libero praesentium facilis quia tempore nemo Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas placeat velit ipsam illum ducimus nesciunt, sit voluptatum maxime voluptatibus provident assumenda numquam nostrum totam neque doloremque eaque nemo dolorum voluptate?</p>
+    </section>
+
+
+    <script src="jquery-3.3.1.min.js"></script>
+
+    <script>
+    
+        function counter(){
+            var count = setInterval(() => {
+                var c = parseInt($('.counter').text());
+                $('.counter').text((++c).toString())
+                if(c == 100){
+                    clearInterval(count)
+                    $('.counter').addClass('hide')
+                    $('.preloader').addClass('active')
+                }
+            },60);
+        }
+    
+        counter()
+    </script>
+    
+</body>
+</html>
